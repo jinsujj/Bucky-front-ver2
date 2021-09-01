@@ -1,0 +1,60 @@
+// https://material.io/design/color/the-color-system.html#tools-for-picking-colors
+// 50 100 200 300 400 500 600 700 800 900
+const colors = {
+  primary: [
+    '#EFE5FD',
+    '#D6C0F4',
+    '#B896E8',
+    '#9C6BDB',
+    '#8649d3',
+    '#6E22CB',
+    '#631DC5',
+    '#5413BC',
+    '#4609B6',
+    '#2B00AC',
+  ],
+  secondary: [
+    '#fbe2f0',
+    '#f5b6da',
+    '#f186c0',
+    '#ef4fa6',
+    '#ee0290',
+    '#ef0078',
+    '#dd0074',
+    '#c7006e',
+    '#b1006a',
+    '#880061',
+  ],
+  default: [
+    '#EDEEF2',
+    '#D1D6DE',
+    '#B5BBC8',
+    '#98A0B1',
+    '#818C9F',
+    '#6C788E',
+    '#5E6A7D',
+    '#4D5667',
+    '#3D4451',
+    '#2A3039',
+  ],
+  accent: [],
+  sucesss: '#11CA2D',
+  error: '#FF402B',
+  text: {
+    default: '#3D4451',
+    primary: '#2A3039',
+    secondary: '#4D5667',
+  },
+  gray: {
+    100: '#F6F6F6',
+    200: '#E5E5E5',
+    300: '#C8C8C8',
+    400: '#848484',
+    500: '#393A3C',
+  },
+  neon: '#00ec4f',
+  cobalt: '#3333CC',
+  orange: '#ff4c1f',
+} as const;
+
+export default colors;
