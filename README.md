@@ -30,6 +30,6 @@ location / {
 Nginx 웹 서버에서 로드 밸런싱을 사용하지 않고 
 AWS ELB 를 통해서 Application Load Balancer 를 사용하며 ELB 에서 
 SSL 을 붙여 준다 
-
-Client  ->   80 port -> AWS(Load Balancer) -> 80port -> AWS(EC2)
-        ->  443 port 
+                        _______________________________________________________
+Client  ->   80 port -> |AWS(Load Balancer) -> 80 port -> AWS(EC2) -- 3000port |
+        ->  443 port -> |______________________________________________________|
