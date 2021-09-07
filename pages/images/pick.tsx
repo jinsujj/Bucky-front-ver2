@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import Layout from '@/components/Layout';
 import colors from '@/styles/colors';
@@ -7,20 +7,12 @@ import SutdioFilter from '@/components/StudioFilter';
 import PickImageResult from '@/components/PickImageResult';
 
 const Pick = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const windowWidth = screen.width;
-    setIsMobile(windowWidth < 450);
-  }, []);
-
   return (
     <>
       <Layout
         headerProps={{
           fixed: true,
         }}
-        noFooter={isMobile}
       >
         <Container>
           <Title>찜한 사진</Title>

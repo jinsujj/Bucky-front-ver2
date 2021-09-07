@@ -41,13 +41,10 @@ const ImageDetailPage = ({
   const [isPickListLoading, setIsPickListLoading] = useState(false);
   const [pickIdList, setPickIdList] = useState<number[]>([]);
   const [isShownPopover, setIsShownPopover] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
   const [beforeImage, setBeforeImage] = useState(0);
   const userId = user?.user_id || 0;
 
   useEffect(() => {
-    const windowWidth = screen.width;
-    windowWidth < 450 ? setIsMobile(true) : setIsMobile(false);
     if (user) {
       getPickImages(user.user_id);
     }
@@ -137,7 +134,6 @@ const ImageDetailPage = ({
         headerProps={{
           fixed: true,
         }}
-        noFooter={isMobile}
       >
         <Container>
           <Border>

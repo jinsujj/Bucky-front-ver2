@@ -8,13 +8,14 @@ import NextLink from 'next/link';
  */
 
 interface Site {
+  isMobile?: boolean;
   label?: string;
   title: string;
   link?: string;
   titleType?: string;
 }
 
-const helpSites: Site[] = [
+const helpSiteMain: Site[] = [
   {
     label: 'contact',
     title: 'ask@bucky.co.kr',
@@ -30,14 +31,29 @@ const helpSites: Site[] = [
     link: '',
   },
   {
+    label: '',
     title: '이용약관',
     link: '',
   },
   {
+    label: '',
     title: '개인정보처리방침',
     link: '',
   },
 ];
+
+// const helpSiteSub: Site[] = [
+//   {
+//     label: '',
+//     title: '이용약관',
+//     link: '',
+//   },
+//   {
+//     label: '',
+//     title: '개인정보처리방침',
+//     link: '',
+//   },
+// ];
 
 type FooterSiteProps = Site;
 
@@ -71,6 +87,10 @@ const SiteTitle = styled.span`
   font-weight: bold;
   font-size: 19px;
   line-height: 1.14;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 12px;
+  }
 `;
 
 function Footer() {
@@ -78,10 +98,12 @@ function Footer() {
     <FooterBlock>
       <Container>
         <ServiceInformation>
-          {helpSites.map(({ title, ...siteProps }) => (
+          {helpSiteMain.map(({ title, ...siteProps }) => (
             <FooterSite key={title} title={title} {...siteProps} />
           ))}
         </ServiceInformation>
+        <br />
+        <br />
         <Copyright>{`©${new Date().getFullYear()} bucky. All rights reserved.`}</Copyright>
       </Container>
     </FooterBlock>
@@ -93,17 +115,21 @@ const FooterBlock = styled.footer``;
 const Container = styled.div`
   width: 100%;
   height: 170px;
-  display: flex;
-  justify-content: space-between;
+  overflow-wrap: break-word;
   align-items: center;
   padding: 46px 40px 67px;
   border-top: 1px solid #e5e5e5;
+
+  @media only screen and (max-width: 600px) {
+    padding: 26px 20px 26px;
+  }
 `;
 
 const ServiceInformation = styled.div`
   display: flex;
   align-items: center;
-  gap: 80px;
+  justify-content: space-between;
+  gap: 20px;
 `;
 
 const Copyright = styled.span`
@@ -112,6 +138,12 @@ const Copyright = styled.span`
   font-weight: 300;
   font-size: 18px;
   line-height: 22px;
+
+  @media only screen and (max-width: 600px) {
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 16px;
+  }
 `;
 
 export default Footer;

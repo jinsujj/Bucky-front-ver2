@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import Layout from '@/components/Layout';
 import useSearchResult, { createSearchResultQueryKey } from '@/hooks/images/useSearchResult';
@@ -35,7 +35,15 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 }
 
 export default function Home(): JSX.Element {
+  const [isMobile, setIsMobile] = useState(false);
   const { data } = useSearchResult();
+
+  useEffect(() => {
+    const windowWidth = screen.width;
+    setIsMobile(windowWidth < 800);
+    console.log('width');
+    console.log(isMobile);
+  }, []);
 
   return (
     <div>
@@ -69,6 +77,7 @@ export default function Home(): JSX.Element {
       <Layout
         headerProps={{
           fixed: true,
+          noSearchForm: isMobile,
         }}
       >
         <Container noResult={data?.count === 0}>

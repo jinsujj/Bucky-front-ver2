@@ -14,15 +14,14 @@ export interface LayoutProps {
   children: React.ReactNode;
   headerProps?: HeaderProps;
   noHeader?: boolean;
-  noFooter?: boolean;
 }
 
-function Layout({ children, noFooter, noHeader, headerProps }: LayoutProps) {
+function Layout({ children, noHeader, headerProps }: LayoutProps) {
   return (
     <React.Fragment>
       {!noHeader && <Header {...headerProps} />}
       <MainBlock>{children}</MainBlock>
-      {!noFooter && <Footer />}
+      <Footer />
     </React.Fragment>
   );
 }

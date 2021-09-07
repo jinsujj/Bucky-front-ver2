@@ -86,7 +86,7 @@ const FilterMenusBlock = styled.div`
 `;
 
 const Conatiner = styled.div`
-  width: 1180px;
+  width: 100%;
   height: 80px;
   padding: 20px 0;
   margin: 0 auto;
@@ -102,7 +102,14 @@ const Conatiner = styled.div`
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  margin: 0 -6px;
+  overflow-x: auto;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  margin: -5px 16px;
+
+  &::-webkit-scrollbar {
+    height: 5px;
+  }
 `;
 
 const OutdoorSelectButton = styled(Button)<{ selected?: boolean }>`

@@ -132,6 +132,11 @@ const ImageCount = styled.div`
   margin-bottom: 20px;
 
   color: #000000;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 20px;
+    line-height: 16px;
+  }
 `;
 
 const ImageListBlock = styled.div`

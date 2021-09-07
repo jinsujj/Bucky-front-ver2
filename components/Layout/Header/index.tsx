@@ -11,12 +11,14 @@ import colors from '@/styles/colors';
 
 export interface HeaderProps {
   fixed?: boolean;
+  noSearchForm?: boolean;
 }
 
-function Header({ fixed }: HeaderProps) {
+function Header({ fixed, noSearchForm }: HeaderProps) {
   const router = useRouter();
   const ref = useRef(null);
   const hasFilter = useMemo(() => router.pathname === '/', [router]);
+  console.log(noSearchForm);
 
   return (
     <HeaderBlock ref={ref} fixed={fixed}>
@@ -28,7 +30,7 @@ function Header({ fixed }: HeaderProps) {
               <SearchFilter />
             </FilterProvider>
           )}
-          <SearchForm />
+          {!noSearchForm && <SearchForm />}
         </CenterBlock>
         <MyMenus />
       </Main>
