@@ -30,6 +30,7 @@ location / {
         }
 ```
 <br/> 
+
 > ### [Load Balancer]
  
 ```
@@ -41,3 +42,8 @@ Client  ->   80 port -> |AWS(Load Balancer) -> 80 port -> AWS(EC2) -- 3000port |
         ->  443 port -> |______________________________________________________|
         
 ```
+
+<br/>
+
+## Contributing
+### - Thanks to @amorfati0310
