@@ -1,16 +1,10 @@
 version: 0.2
 
 phases:
-  pre_build:
-    commands:
-      - echo Logging in to Amazon ECR...
+  install:
+    runtime-versions:
+      nodejs: 14
   build:
     commands:
-      - echo Build started on `date`
-      - next build
-  post_build:
-    commands:
-      - echo Build completed on `date`
-      - next start
-artifacts:
-    files: imagedefinitions.json
+      - yarn build
+      - yarn start 
