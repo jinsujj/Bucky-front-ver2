@@ -4,7 +4,13 @@ phases:
   install:
     runtime-versions:
       nodejs: 14
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
   build:
     commands:
+      - echo Build started on `date`
       - yarn build
-      - yarn start 
+  post_build:
+    commands:
+      - echo Build completed on `date`
