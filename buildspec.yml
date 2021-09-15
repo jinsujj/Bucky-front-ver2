@@ -8,6 +8,10 @@ phases:
     commands:
       - echo Nothing to do in the pre_build phase...
       - npm i -g next
+      - npm install --save init -y
+      - npm install --save react react-dom next
+      - npm install yarn -g
+      - yarn add --dev typescript @types/react
   build:
     commands:
       - echo Build started on `date`
