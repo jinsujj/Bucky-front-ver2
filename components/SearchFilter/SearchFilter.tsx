@@ -91,7 +91,7 @@ function SearchFilter() {
     <SearchFilterBlock onClick={toggleFilter}>
       <LeftWrapper>
         <FilterIcon />
-        <Label>필터로 검색하기</Label>
+        {/* <Label>필터로 검색하기</Label> */}
       </LeftWrapper>
       <ArrowWrapper isOpen={isOpen}>
         <ArrowDown />
@@ -103,7 +103,7 @@ function SearchFilter() {
 
 const SearchFilterBlock = styled.div`
   position: relative;
-  width: 380px;
+  width: 80px;
   height: 40px;
   display: flex;
   align-items: flex-end;
@@ -118,18 +118,14 @@ const SearchFilterBlock = styled.div`
     background-color: ${colors.gray[200]};
     border-color: ${colors.gray[400]};
   }
-
-  @media only screen and (max-width: 1250px) {
-    width: 50%;
-  }
 `;
 
 const LeftWrapper = styled.div``;
 
-const Label = styled.label`
-  margin-left: 10px;
-  color: ${colors.gray[400]};
-`;
+// const Label = styled.label`
+//   margin-left: 10px;
+//   color: ${colors.gray[400]};
+// `;
 
 const ArrowWrapper = styled.div<{ isOpen: boolean }>`
   position: relative;
