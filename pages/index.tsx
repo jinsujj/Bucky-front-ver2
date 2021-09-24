@@ -42,7 +42,6 @@ export default function Home(): JSX.Element {
     const windowWidth = screen.width;
     setIsMobile(windowWidth < 800);
     console.log('width');
-    console.log(isMobile);
   }, []);
 
   return (

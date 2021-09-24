@@ -18,7 +18,6 @@ function Header({ fixed, noSearchForm }: HeaderProps) {
   const router = useRouter();
   const ref = useRef(null);
   const hasFilter = useMemo(() => router.pathname === '/', [router]);
-  console.log(noSearchForm);
 
   return (
     <HeaderBlock ref={ref} fixed={fixed}>
