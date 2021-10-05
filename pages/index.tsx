@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import Layout from '@/components/Layout';
 import useSearchResult, { createSearchResultQueryKey } from '@/hooks/images/useSearchResult';
@@ -12,6 +12,7 @@ import ImageResult from '@/components/ImageResult';
 import colors from '@/styles/colors';
 import { css } from '@emotion/react';
 import { GA_TRACKING_ID } from 'utils/gtag';
+import router from 'next/router';
 
 const noResult =
   'https://bucky-bodyprofile.s3.ap-northeast-2.amazonaws.com/assets/icons/no+result.svg';
@@ -35,14 +36,12 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 }
 
 export default function Home(): JSX.Element {
-  const [isMobile, setIsMobile] = useState(false);
+  var isMobile;
+  if(process.browser){
+    isMobile = screen.width;
+  }
   const { data } = useSearchResult();
 
-  useEffect(() => {
-    const windowWidth = screen.width;
-    setIsMobile(windowWidth < 800);
-    console.log('width');
-  }, []);
 
   return (
     <div>

@@ -94,7 +94,7 @@ function ImageResult() {
     <ImageResultBlock>
       <ImageCount>{data?.count} 개의 사진이 검색되었습니다</ImageCount>
       <ImageListBlock>
-        <ResponsiveMasonry columnsCountBreakPoints={{ 380: 3, 1024: 3, 1140: 3 }}>
+        <ResponsiveMasonry columnsCountBreakPoints={{ 380: 1, 450: 2, 900: 3 }}>
           <Masonry columnsCount={5} gutter={20}>
             {imageList.map((image) => (
               <ImageCard

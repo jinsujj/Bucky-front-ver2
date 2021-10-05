@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import React, { useMemo, useRef } from 'react';
+import React, { useEffect, useMemo, useRef } from 'react';
 import HomeLink from '@/components/HomeLink';
 import SearchForm from '@/components/SearchForm';
 import SearchFilter from '@/components/SearchFilter';
@@ -11,13 +11,15 @@ import colors from '@/styles/colors';
 
 export interface HeaderProps {
   fixed?: boolean;
-  noSearchForm?: boolean;
+  noSearchForm?: number;
 }
 
 function Header({ fixed, noSearchForm }: HeaderProps) {
+  console.log("nosearchform" + noSearchForm);
   const router = useRouter();
   const ref = useRef(null);
   const hasFilter = useMemo(() => router.pathname === '/', [router]);
+
 
   return (
     <HeaderBlock ref={ref} fixed={fixed}>
@@ -29,7 +31,7 @@ function Header({ fixed, noSearchForm }: HeaderProps) {
               <SearchFilter />
             </FilterProvider>
           )}
-          {!noSearchForm && <SearchForm />}
+          {(noSearchForm != null && noSearchForm> 450) && <SearchForm />}
         </CenterBlock>
         <MyMenus />
       </Main>

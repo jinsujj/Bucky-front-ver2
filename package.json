@@ -20,9 +20,10 @@
     "axios": "^0.21.1",
     "dayjs": "^1.10.5",
     "env-cmd": "^10.1.0",
+    "init": "^0.1.2",
     "lodash": "^4.17.21",
     "masonic": "^3.4.1",
-    "next": "^11.0.0",
+    "next": "^11.1.2",
     "next-redux-wrapper": "^7.0.2",
     "next-s3-upload": "^0.1.5",
     "polished": "^4.1.2",
@@ -40,7 +41,7 @@
     "@babel/preset-env": "^7.14.2",
     "@emotion/babel-plugin": "^11.3.0",
     "@types/lodash": "^4.14.170",
-    "@types/react": "^17.0.5",
+    "@types/react": "^17.0.27",
     "@typescript-eslint/eslint-plugin": "^4.25.0",
     "@typescript-eslint/parser": "^4.25.0",
     "eslint": "^7.26.0",
@@ -53,6 +54,6 @@
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
     "prettier": "^2.3.0",
-    "typescript": "^4.2.4"
+    "typescript": "^4.4.3"
   }
 }

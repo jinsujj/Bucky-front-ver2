@@ -69,11 +69,7 @@ function SearchForm() {
 }
 
 const SearchFormBlock = styled.form`
-  width: 780px;
-
-  @media only screen and (max-width: 1250px) {
-    width: 60%;
-  }
+  max-width: 750px;
 `;
 
 const SearchInputBlock = styled.div`
@@ -93,6 +89,7 @@ const SearchInputBlock = styled.div`
   cursor: text;
   background-color: ${colors.gray[100]};
   color: ${colors.gray[400]};
+
 
   &:hover {
     border-color: ${colors.neon};

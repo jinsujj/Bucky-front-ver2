@@ -133,6 +133,7 @@ const ImageDetailPage = ({
       <Layout
         headerProps={{
           fixed: true,
+          noSearchForm:500
         }}
       >
         <Container>
@@ -264,7 +265,7 @@ const ImageDetailPage = ({
           </Border>
           <Item>
             <H3>이 사진과 유사한 사진</H3>
-            <ResponsiveMasonry columnsCountBreakPoints={{ 380: 2, 760: 3, 1140: 3 }}>
+            <ResponsiveMasonry columnsCountBreakPoints={{ 380: 1, 450: 2, 900: 3 }}>
               <Masonry columnsCount={5} gutter={20}>
                 {similarImage.map((image) => (
                   <Link href={`/images/${image.image_id}`} key={image.image_id} passHref>
