@@ -19,12 +19,12 @@ const helpSiteMain: Site[] = [
   {
     label: 'contact',
     title: 'ask@bucky.co.kr',
-    link: '',
+    link: 'mailto:ask@bucky.co.kr',
   },
   {
     label: 'sns',
     title: 'instagram',
-    link: '',
+    link: 'https://www.instagram.com/bucky.co.kr/',
   },
   {
     title: 'FAQ',
@@ -62,11 +62,11 @@ function FooterSite({ label, title, link }: FooterSiteProps) {
     <FooterSiteBlock>
       <Label>{label}</Label>
       {link ? (
-        <NextLink href={link} passHref>
-          <SiteTitle>{title}</SiteTitle>
+        <NextLink href={link} passHref >
+          <SiteTitle cursor="pointer" >{title}</SiteTitle>
         </NextLink>
       ) : (
-        <SiteTitle>{title}</SiteTitle>
+        <SiteTitle cursor="">{title}</SiteTitle>
       )}
     </FooterSiteBlock>
   );
@@ -81,12 +81,14 @@ const Label = styled.span`
   margin-bottom: 13px;
 `;
 
-const SiteTitle = styled.span`
+const SiteTitle = styled.span<{cursor:string}>`
   font-family: Noto Sans KR;
   font-style: normal;
   font-weight: bold;
   font-size: 19px;
   line-height: 1.14;
+
+  cursor: ${props => props.cursor||'' };
 
   @media only screen and (max-width: 600px) {
     font-size: 12px;
@@ -96,6 +98,7 @@ const SiteTitle = styled.span`
 function Footer() {
   return (
     <FooterBlock>
+      <Hr/>
       <Container>
         <ServiceInformation>
           {helpSiteMain.map(({ title, ...siteProps }) => (
@@ -112,13 +115,19 @@ function Footer() {
 
 const FooterBlock = styled.footer``;
 
+const Hr = styled.hr`
+    background-color: #e5e5e5;
+    border-style: none;
+    height: 1px;
+`;
+
 const Container = styled.div`
-  width: 100%;
+  width: 1200px;
+  margin: 0 auto;
   height: 170px;
   overflow-wrap: break-word;
   align-items: center;
   padding: 46px 40px 67px;
-  border-top: 1px solid #e5e5e5;
 
   @media only screen and (max-width: 600px) {
     padding: 26px 20px 26px;
@@ -126,6 +135,7 @@ const Container = styled.div`
 `;
 
 const ServiceInformation = styled.div`
+  max-width: 1200px;
   display: flex;
   align-items: center;
   justify-content: space-between;
