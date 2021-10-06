@@ -430,12 +430,18 @@ const ItemRight = styled.div`
     width: 80%;
     border: 1px solid #e5e5e5;
     margin-bottom: 39px;
+
+    @media only screen and (max-width: 450px) {
+      margin-bottom: 15px;
+    }
   }
 
   @media only screen and (max-width: 450px) {
     grid-column: 1;
-    width: auto;
+    font-size: 9px;
+    width: 100%;
     padding-left: 5px;
+    padding-right: 15px;
     margin: 15px 15px;
   }
 `;
@@ -452,6 +458,12 @@ const Title = styled.div`
   margin-bottom: 53px;
   color: #000000;
   cursor: pointer;
+
+  @media only screen and (max-width: 450px) {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
 `;
 
 const StudioInfo = styled.div`
@@ -466,6 +478,11 @@ const StudioInfo = styled.div`
 
   & > div {
     margin-top: 16px;
+
+    @media only screen and (max-width: 450px) {
+      margin-top: 10px;
+      font-size: 14px;
+    }
   }
 `;
 
@@ -475,10 +492,20 @@ const LinkIcon = styled.div`
   margin-top: 39px;
   margin-bottom: 32px;
   justify-content: flex-start;
+
+  @media only screen and (max-width: 450px) {
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
 `;
 
 const IconImage = styled.img`
   margin-right: 40px;
+
+  @media only screen and (max-width: 450px) {
+    margin-right: 30px;
+    height: 24px;
+  }
 `;
 
 const Item = styled.div`
@@ -498,6 +525,12 @@ const Label = styled.div`
   margin-top: 10px;
   margin-bottom: 3px;
   color: #848484;
+
+  @media only screen and (max-width: 450px) {
+    font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 1px;
+  }
 `;
 
 const Value = styled.div`
@@ -509,6 +542,12 @@ const Value = styled.div`
 
   margin-top: 10px;
   color: #000000;
+
+  @media only screen and (max-width: 450px) {
+    font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 1px;
+  }
 `;
 
 const MenuName = styled.div`
@@ -520,6 +559,12 @@ const MenuName = styled.div`
   margin-top: 10px;
   margin-bottom: 50px;
   color: #000000;
+
+  @media only screen and (max-width: 450px) {
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
 `;
 
 const Description = styled.p`
@@ -544,6 +589,10 @@ const H3 = styled.div`
   background-color: white;
   padding-bottom: 20px;
   padding-top: 20px;
+
+  @media only screen and (max-width: 450px) {
+    font-size:20px;
+  }
 `;
 
 const Action = styled.div`
@@ -561,4 +610,10 @@ const LoadButton = styled(Button)`
   font-family: Montserrat;
   font-weight: bold;
   font-size: 14px;
+
+  @media only screen and (max-width: 450px) {
+    width: 120px;
+    height: 32px;
+    font-size: 9px;
+  }
 `;

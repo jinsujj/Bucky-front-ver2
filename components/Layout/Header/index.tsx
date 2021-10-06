@@ -15,7 +15,6 @@ export interface HeaderProps {
 }
 
 function Header({ fixed, noSearchForm }: HeaderProps) {
-  console.log("nosearchform" + noSearchForm);
   const router = useRouter();
   const ref = useRef(null);
   const hasFilter = useMemo(() => router.pathname === '/', [router]);

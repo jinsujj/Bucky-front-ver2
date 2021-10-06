@@ -101,6 +101,12 @@ const LoadButton = styled(Button)`
   font-family: Montserrat;
   font-weight: bold;
   font-size: 14px;
+
+  @media only screen and (max-width: 450px) {
+    width: 120px;
+    height: 32px;
+    font-size: 9px;
+  }
 `;
 
 export default PickImageResult;
