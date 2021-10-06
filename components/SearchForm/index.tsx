@@ -69,7 +69,9 @@ function SearchForm() {
 }
 
 const SearchFormBlock = styled.form`
-  max-width: 750px;
+  max-width: 600px;
+  width:100%;
+  padding-left: 5px;
 `;
 
 const SearchInputBlock = styled.div`
@@ -97,6 +99,10 @@ const SearchInputBlock = styled.div`
 
   &:focus-within {
     border-color: ${colors.neon};
+  }
+
+  @media only screen and (max-width: 450px) {
+    height: 35px;
   }
 `;
 

@@ -18,7 +18,7 @@ function MyProfile() {
         trigger="click"
         content={<LogoutPopup />}
       >
-        <MyProfileButton variant="text">
+        <MyProfileButton variant="text" size="medium">
           <UserAvatar image={user?.thumbnail_image_url} />
         </MyProfileButton>
       </MyProfilePopover>
@@ -26,11 +26,12 @@ function MyProfile() {
   );
 }
 
-const MyProfileBlock = styled.div``;
+const MyProfileBlock = styled.div`
+  width: 30px;
+`;
 
 const MyProfileButton = styled(Button)`
   display: flex;
-  padding: 0 6px;
   height: auto;
   border: none;
 `;

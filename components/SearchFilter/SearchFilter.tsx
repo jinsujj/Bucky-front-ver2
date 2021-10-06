@@ -109,7 +109,6 @@ const SearchFilterBlock = styled.div`
   align-items: flex-end;
   justify-content: space-between;
   padding: 12px 18px 12px 20px;
-  margin-right: 20px;
   background-color: ${colors.gray[100]};
   border: 1px solid ${colors.gray[300]};
   border-radius: 50px;

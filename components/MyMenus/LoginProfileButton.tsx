@@ -15,7 +15,7 @@ function LoginProfileButton() {
         trigger="click"
         content={<KaKaoLoginPopup />}
       >
-        <ProfileButton variant="text">
+        <ProfileButton variant="text" size="medium">
           <ProfileIcon />
         </ProfileButton>
       </ProfilePropover>
@@ -27,7 +27,6 @@ const MyProLoginProfileButtonBlock = styled.div``;
 
 const ProfileButton = styled(Button)`
   display: flex;
-  padding: 0 6px;
   height: auto;
 `;
 

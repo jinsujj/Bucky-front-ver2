@@ -36,7 +36,7 @@ function MyPickLink() {
           trigger="click"
           content={<KaKaoLoginPopup title="찜하기는 로그인 후 이용 가능합니다." />}
         >
-          <HeartButton onClick={goToPickListPage} variant="text">
+          <HeartButton onClick={goToPickListPage} variant="text" size="medium">
             <HeartIcon />
             {pickCount > 0 && <Badge count={pickCount} />}
           </HeartButton>
@@ -57,7 +57,6 @@ const HeartButton = styled(Button)`
   position: relative;
   min-width: auto;
   padding: 0 6px;
-  margin-right: 6px;
 `;
 
 const MyPickPopover = styled(Popover)`

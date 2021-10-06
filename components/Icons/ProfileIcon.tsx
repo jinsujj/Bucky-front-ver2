@@ -2,8 +2,8 @@ import React from 'react';
 import Icon, { IconCommonProps } from '.';
 
 const SearchIcon = React.forwardRef<HTMLSpanElement, IconCommonProps>((props, ref) => (
-  <Icon {...props} ref={ref} size={34} fill="none">
-    <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <Icon {...props} ref={ref} size={24} fill="none">
+    <svg width="24" height="24" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
       <mask id="path-1-inside-1" fill="white">
         <path
           fillRule="evenodd"

@@ -21,6 +21,10 @@ const LogoImage = styled.img`
   display: flex;
   align-items: center;
   margin-right: 24px;
+
+  @media only screen and (max-width: 1250px) {
+    margin-right: 12px;
+  }
 `;
 
 export default Logo;

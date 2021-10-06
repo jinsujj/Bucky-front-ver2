@@ -39,24 +39,22 @@ function Header({ fixed, noSearchForm }: HeaderProps) {
 }
 
 const Main = styled.div`
+  max-width: 1200px;
+  width: 100%;
   height: 80px;
   display: flex;
   align-items: center;
-  width: 100%;
-  padding: 0 40px;
+  padding: 0 20px;
+
 `;
 
 const CenterBlock = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px 0px;
-  width: 1180px;
-  margin: 0 auto;
-
-  @media only screen and (max-width: 1250px) {
-    width: 100%;
-  }
+  padding: 0px 0px;
+  width: 100%;
+  margin: 0 0;
 `;
 
 const HeaderBlock = styled.header<{
@@ -66,6 +64,7 @@ const HeaderBlock = styled.header<{
   background-color: #ffffff;
   height: 80px;
   display: flex;
+  justify-content: center;
   transition: background-color 0.3s, border-color 0.3s;
   border-bottom: 1px solid ${colors.gray[200]};
 
@@ -77,6 +76,7 @@ const HeaderBlock = styled.header<{
       left: 0;
       right: 0;
     `}
+
 `;
 
 export default Header;
